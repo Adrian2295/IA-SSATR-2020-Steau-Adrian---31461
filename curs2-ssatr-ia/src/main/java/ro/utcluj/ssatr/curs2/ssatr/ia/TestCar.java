@@ -46,6 +46,9 @@ public class TestCar {
         ElectricCar e1 = new ElectricCar("Nissan", 0);
         e1.accelerate();
         
+        OttoCar c1 = new OttoCar("BWM",2);
+        c1.accelerate();
+        
         Car x1 = new DieselCar("Dacia",1);
         x1.accelerate();
         

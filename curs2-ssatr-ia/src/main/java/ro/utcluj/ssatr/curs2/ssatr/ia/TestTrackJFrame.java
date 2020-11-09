@@ -44,7 +44,7 @@ public class TestTrackJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Test Track");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Add Car"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
 
         jLabel1.setText("Name");
 
@@ -59,7 +59,12 @@ public class TestTrackJFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Type");
 
-        comboCarType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electric car", "Diesel car" }));
+        comboCarType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Electric car", "Diesel car", "Otto car" }));
+        comboCarType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboCarTypeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -103,7 +108,7 @@ public class TestTrackJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Test Cars"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
 
         jButton1.setText("Test Cars");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +177,12 @@ public class TestTrackJFrame extends javax.swing.JFrame {
             DieselCar c = new DieselCar(name, speed);
             track.addCar(c);            
             jTextArea1.append("New diesel car added.\n");
-        }else{
+        }else if (type.equals("Otto car")){
+            OttoCar c = new OttoCar(name,speed);
+            track.addCar(c);
+            jTextArea1.append("New otto car added.\n");
+        }
+        else{
             jTextArea1.append("Car type unknown.\n");
         }
         
@@ -183,6 +193,10 @@ public class TestTrackJFrame extends javax.swing.JFrame {
         this.jTextArea1.append(track.getAllCarsDetails());
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void comboCarTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboCarTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboCarTypeActionPerformed
 
     /**
      * @param args the command line arguments
