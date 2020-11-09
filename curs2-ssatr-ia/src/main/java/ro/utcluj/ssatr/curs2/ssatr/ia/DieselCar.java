@@ -12,8 +12,8 @@ package ro.utcluj.ssatr.curs2.ssatr.ia;
 public class DieselCar extends Car { //clasa derivata  
 
     
-    public DieselCar(String name, int speed) {
-        super(name, speed); //apelare constructor din calsa de baza
+    public DieselCar(String name, int speed,String platenumber) {
+        super(name, speed,platenumber); //apelare constructor din calsa de baza
     }
     
     void accelerate(){ //suprascriere metoda

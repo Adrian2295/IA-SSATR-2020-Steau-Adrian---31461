@@ -12,8 +12,8 @@ package ro.utcluj.ssatr.curs2.ssatr.ia;
 public class ElectricCar extends Car {
     private int batteryLevel;
     
-    public ElectricCar(String name, int speed) {
-        super(name, speed);
+    public ElectricCar(String name, int speed, String platenumber) {
+        super(name, speed,platenumber);
         batteryLevel = 100;
     }
 

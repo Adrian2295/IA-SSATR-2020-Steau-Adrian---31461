@@ -13,11 +13,13 @@ public class Car {
     //atribute
     private String name;
     public  int speed;
+    private String platenumber;
     
     //constructori
-    Car(String name, int speed){
+    Car(String name, int speed, String platenumber){
         this.name = name;
         this.speed = speed;
+        this.platenumber = platenumber;
     }
     
     void accelerate(){
@@ -31,6 +33,10 @@ public class Car {
 
     public int getSpeed() {
         return speed;
+    }
+    
+    public String getPlateNumber(){
+        return platenumber;
     }
     
     
